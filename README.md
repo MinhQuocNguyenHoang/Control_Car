@@ -53,5 +53,5 @@ git clone https://github.com/MinhQuocNguyenHoang/Control_Car.git
 - Upgrade to ESP32 for IoT control (Wi-Fi / BLE) 
 
 ## Author 
-Nguyễn Hoàng Minh Quốc 
+Nguyễn Hoàng Minh Quốc<br>
 GitHub: @MinhQuocNguyenHoang 
