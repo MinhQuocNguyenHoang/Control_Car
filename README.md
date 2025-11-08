@@ -1,49 +1,57 @@
-Giới thiệu
+# Bluetooth Controlled Car
 
-Dự án này là một xe robot điều khiển từ xa bằng Bluetooth, trong đó:
+## Overview
+This project implements a remote-controlled smart car using **Bluetooth communication** between an Android app (MIT App Inventor) and an Arduino board.  
+The user can control the car's movement through a simple mobile app interface. 
 
-Arduino Uno R3 (hoặc ESP32) đóng vai trò điều khiển.
+## Hardware Used
+- **MCU:** Arduino UNO 
+- **Bluetooth Module:** HC-06 
+- **Motor Driver:** L298N (H-Bridge) 
+- Motor: V1 gear motor 
+- **Battery Pack 8.4V** (power supply for motors & Arduino) 
 
-HC-05 Bluetooth module để kết nối với điện thoại.
+## Software & Tools
+- **Firmware Language:** Arduino C/C++ 
+- **IDE:** Arduino IDE 
+- **Mobile App:** MIT App Inventor 
+- **Communication:** UART over Bluetooth 
+- **Motor Control:** PWM + GPIO pins 
 
-Ứng dụng Android được lập trình bằng MIT App Inventor để gửi lệnh (tiến, lùi, rẽ trái, rẽ phải, dừng) đến xe.
+## Features 
+- Control movement via smartphone: 
+  - Forward / Backward 
+  - Turn Left / Turn Right 
+  - Stop 
+- Real-time wireless communication 
+- Expandable architecture (can add autonomous modes) 
 
-Mục tiêu:
+## Project Structure
+```
+Control_Car/
+├─ xebluetooth.ino # Arduino source code (.ino)
+├─ control_app_1.aia/ # MIT App Inventor project (.aia)
+├─ Readme.md/ # This files
 
-Hiểu cơ chế giao tiếp Bluetooth giữa Arduino và điện thoại.
+```
 
-Ứng dụng MIT App Inventor để lập trình app điều khiển.
+## Getting Started
+```bash
+git clone https://github.com/MinhQuocNguyenHoang/Control_Car.git
+# Open .ino file in Arduino IDE and upload
+```
+- Install & Connect Mobile App 
+- Import .aia file in mobile_app/ into MIT App Inventor 
+- Export and install APK on Android 
+- Connect to HC-05 Bluetooth 
+- Press buttons to control the car
 
-Thực hành điều khiển động cơ DC qua module driver.
+## Future Improvements 🚀
 
-Phần cứng sử dụng
+- Add speed control (PWM throttle) 
+- Add more UI controls & status display 
+- Upgrade to ESP32 for IoT control (Wi-Fi / BLE) 
 
-Arduino Uno R3
-
-Module Bluetooth HC-06
-
-Driver motor L298N
-
-2 động cơ DC + bánh xe
-
-Pin Li-ion hoặc 18650 + mạch sạc bảo vệ
-
-Khung xe robot
-
-Phần mềm
-
-Arduino IDE để lập trình vi điều khiển.
-
-MIT App Inventor để thiết kế ứng dụng điều khiển.
-
-Sơ đồ kết nối
-
-HC-05 TX → Arduino RX ( chân 0)
-
-HC-05 RX → Arduino TX ( chân 1)
-
-Driver L298N → Động cơ trái/phải
-
-Nguồn pin → Arduino + L298N
-
-Hướng dẫn sử dụng APP: tải app đó lên MIT APP INVENTER trên web rồi tải app về điện thoại dưới dạng APK và kết nối bluetooth, sử dụng
+## Author 
+Nguyễn Hoàng Minh Quốc 
+GitHub: @MinhQuocNguyenHoang 
