@@ -46,7 +46,7 @@ git clone https://github.com/MinhQuocNguyenHoang/Control_Car.git
 - Connect to HC-05 Bluetooth 
 - Press buttons to control the car
 
-## Future Improvements 🚀
+## Future Improvements
 
 - Add speed control (PWM throttle) 
 - Add more UI controls & status display 
